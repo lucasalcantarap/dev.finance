@@ -18,7 +18,6 @@ const Storage = {
     return JSON.parse(localStorage.getItem("dev.finances:transactions")) || [];
   },
 
-
   set(transactions) {
     localStorage.setItem(
       "dev.finances:transactions",
@@ -218,11 +217,11 @@ const Form = {
 
 const App = {
   init() {
-    Transaction.all.forEach(DOM.addTransaction)
+    Transaction.all.forEach(DOM.addTransaction);
 
-    DOM.UpdateBalance()
+    DOM.UpdateBalance();
 
-    Storage.set(Transaction.all)
+    Storage.set(Transaction.all);
   },
 
   reload() {
@@ -232,4 +231,3 @@ const App = {
 };
 
 App.init();
-
